@@ -1,0 +1,63 @@
+body {
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 32%),
+    linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+.home-hero {
+  display: grid;
+  min-height: 100vh;
+  padding: 2rem;
+  place-items: center;
+}
+
+.home-hero__content {
+  width: min(100%, var(--container-width));
+  padding: clamp(2rem, 5vw, 4.5rem);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.88);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
+}
+
+.home-hero__eyebrow {
+  margin-bottom: 0.75rem;
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-hero__title {
+  font-size: clamp(2.75rem, 8vw, 5.5rem);
+  font-weight: 700;
+  line-height: 0.96;
+}
+
+.home-hero__role {
+  margin-top: 1rem;
+  color: var(--color-text-muted);
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-weight: 600;
+}
+
+.home-hero__tagline {
+  max-width: 34rem;
+  margin-top: 1.5rem;
+  color: var(--color-text-muted);
+  font-size: 1.0625rem;
+}
+
+@media (max-width: 640px) {
+  .home-hero {
+    padding: 1rem;
+  }
+
+  .home-hero__content {
+    padding: 2rem 1.5rem;
+  }
+}
